@@ -1,12 +1,22 @@
-Meteor.publish('getAllTodos', function (filter) {
+const todoPubFields = {
+  text: 1,
+  completed: 1
+};
+
+const getTodoPublication = function (filter) {
+  let query = {};
+
   switch (filter) {
-    case 'SHOW_ALL':
-      return Todos.find();
     case 'SHOW_COMPLETED':
-      return Todos.find({completed: true});
+      query.completed = true;
+      break;
     case 'SHOW_ACTIVE':
-      return Todos.find({completed: false});
+      query.completed = false;
+      break;
     default:
-      return Todos.find();
+      break;
   }
-});
+  return Todos.find(query, todoPubFields);
+};
+
+Meteor.publish('getTodos', getTodoPublication);

@@ -4,7 +4,7 @@ TodoList = class TodoList extends React.Component {
   }
 
   getMeteorData() {
-    const todoSub = Meteor.subscribe('getAllTodos', Store.getReactiveState('visibilityFilter'));
+    const todoSub = Meteor.subscribe('getTodos');
     return {
       todoSubReady: todoSub.ready(),
       todoList: Todos.find().fetch() || []
