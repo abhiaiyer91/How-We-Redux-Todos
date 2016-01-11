@@ -1,3 +1,5 @@
+const { connect } = ReactRedux;
+
 Footer = (props) => (
   <p>
     Show:
@@ -15,3 +17,11 @@ Footer = (props) => (
     </FilterLink>
   </p>
 );
+
+const mapStateToProps = (state) => {
+  return {
+    visibilityFilter: state.visibilityFilter
+  }
+};
+
+Footer = connect(mapStateToProps)(Footer);
