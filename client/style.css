@@ -1,4 +1,17 @@
 .todo-container {
     max-width: 320px;
     margin: 0 auto;
+    padding-top: 16px;
+}
+
+.pagination > li {
+    display: inline-block;
+}
+
+.previous {
+    margin-right: 8px;
+}
+
+.next{
+    margin-left: 8px;
 }
