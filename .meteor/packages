@@ -24,3 +24,5 @@ meteorhacks:npm
 npm-container
 reactive-dict
 reactive-var
+tmeasday:publish-counts
+twbs:bootstrap

@@ -1,14 +1,7 @@
 TodoApp = () => (
   <div className="todo-container">
-    <AddTodo {...Store}/>
-    <TodoList {...Store}/>
-    <Footer {...Store}/>
+    <AddTodo/>
+    <TodoList/>
+    <Footer/>
   </div>
 );
-
-Meteor.startup(()=> {
-  ReactDOM.render(
-    <TodoApp />,
-    document.getElementById('app')
-  );
-});

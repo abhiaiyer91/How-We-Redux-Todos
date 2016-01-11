@@ -10,6 +10,18 @@ const visibilityFilter = (state = 'SHOW_ALL', action = {}) => {
   }
 };
 
+const PER_PAGE_SKIP = 10;
+const pageSkip = (state = 0, action = {}) => {
+  switch (action.type) {
+    case 'CHANGE_PAGE':
+      // take the currentPageNumber from the payload
+      return action.currentPageNumber * PER_PAGE_SKIP;
+    default:
+      return state;
+  }
+};
+
 rootReducer = combineReducers({
-  visibilityFilter
+  visibilityFilter,
+  pageSkip
 });

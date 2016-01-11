@@ -1,3 +1,5 @@
+const { connect } = ReactRedux;
+
 AddTodo = ({ dispatch }) => {
   let input;
 
@@ -15,3 +17,5 @@ AddTodo = ({ dispatch }) => {
     </div>
   );
 };
+
+AddTodo = connect()(AddTodo);

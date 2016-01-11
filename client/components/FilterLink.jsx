@@ -1,7 +1,9 @@
+const { connect } = ReactRedux;
+
 FilterLink = class FilterLink extends React.Component {
   getMeteorData() {
-    const { filter, getReactiveState } = this.props;
-    const active = getReactiveState('visibilityFilter') === filter;
+    const { filter, visibilityFilter} = this.props;
+    const active = visibilityFilter === filter;
     return {
       active
     }
@@ -18,3 +20,5 @@ FilterLink = class FilterLink extends React.Component {
 };
 
 reactMixin(FilterLink.prototype, ReactMeteorData);
+
+FilterLink = connect()(FilterLink);

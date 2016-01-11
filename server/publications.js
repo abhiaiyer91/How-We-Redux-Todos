@@ -3,7 +3,7 @@ const todoPubFields = {
   completed: 1
 };
 
-const getTodoPublication = function (filter) {
+const getTodoPublication = function (filter, pageSkip = 0) {
   let query = {};
 
   switch (filter) {
@@ -16,7 +16,8 @@ const getTodoPublication = function (filter) {
     default:
       break;
   }
-  return Todos.find(query, todoPubFields);
+  Counts.publish(this, 'TodoCount', Todos.find(query));
+  return Todos.find(query, {fields: todoPubFields, skip: pageSkip, limit: 10});
 };
 
 Meteor.publish('getTodos', getTodoPublication);
