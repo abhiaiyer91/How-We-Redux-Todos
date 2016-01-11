@@ -21,4 +21,10 @@ FilterLink = class FilterLink extends React.Component {
 
 reactMixin(FilterLink.prototype, ReactMeteorData);
 
+const mapStateToProps = (state) => {
+  return {
+    visibilityFilter: state.visibilityFilter
+  }
+};
+
 FilterLink = connect()(FilterLink);
