@@ -1,25 +1,14 @@
 const { connect } = ReactRedux;
 
-FilterLink = class FilterLink extends React.Component {
-  getMeteorData() {
-    const { filter, visibilityFilter} = this.props;
-    const active = visibilityFilter === filter;
-    return {
-      active
-    }
-  }
-
-  render() {
-    const { dispatch, filter, children } = this.props;
-    return (
-      <Link active={this.data.active} onClick={()=> {dispatch(setVisibilityFilter(filter))}}>
-        {children}
-      </Link>
-    )
-  }
+FilterLink = () => {
+  const { dispatch, filter, visibilityFilter, children } = this.props;
+  return (
+    <Link active={visibilityFilter === filter} onClick={()=> {dispatch(setVisibilityFilter(filter))}}>
+      {children}
+    </Link>
+  )
 };
 
-reactMixin(FilterLink.prototype, ReactMeteorData);
 
 const mapStateToProps = (state) => {
   return {
@@ -27,4 +16,4 @@ const mapStateToProps = (state) => {
   }
 };
 
-FilterLink = connect()(FilterLink);
+FilterLink = connect(mapStateToProps)(FilterLink);
