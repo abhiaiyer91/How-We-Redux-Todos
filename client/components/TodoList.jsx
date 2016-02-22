@@ -15,7 +15,7 @@ TodoList = class TodoList extends React.Component {
     const { dispatch } = this.props;
     const todos = this.data.todoList;
     const pagination = this.data.todoCount > 10 ? <TodoPagination
-      handlePageClick={(data)=> {return dispatch({type: 'CHANGE_PAGE', currentPageNumber: data.selected})}}
+      handlePageClick={(data)=> {return dispatch(changePage(data.selected))}}
       pageCount={this.data.todoCount/10}/> : '';
     return (
       <div>
