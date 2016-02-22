@@ -17,3 +17,9 @@ setVisibilityFilter = (filter) => {
   };
 };
 
+changePage = (currentPageNumber) => {
+  return {
+    type: 'CHANGE_PAGE',
+    currentPageNumber
+  };
+};
