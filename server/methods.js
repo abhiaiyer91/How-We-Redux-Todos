@@ -1,3 +1,5 @@
+import Todos from '../imports/collection';
+
 Meteor.methods({
   addTodo(text) {
     const todos = Todos.insert({

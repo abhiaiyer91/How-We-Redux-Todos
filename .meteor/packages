@@ -12,17 +12,15 @@ session                 # Client-side reactive dictionary for your app
 jquery                  # Helpful client-side library
 tracker                 # Meteor's client-side reactive programming library
 
-standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-react
-cosmos:browserify
-meteorhacks:npm
 
 
-npm-container
 reactive-dict
 reactive-var
 tmeasday:publish-counts
 twbs:bootstrap
+standard-minifier-css
+standard-minifier-js
+react-meteor-data
