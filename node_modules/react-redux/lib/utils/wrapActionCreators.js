@@ -1,5 +1,8 @@
 'use strict';
 
+exports.__esModule = true;
+exports["default"] = wrapActionCreators;
+
 var _redux = require('redux');
 
 function wrapActionCreators(actionCreators) {
@@ -7,5 +10,3 @@ function wrapActionCreators(actionCreators) {
     return (0, _redux.bindActionCreators)(actionCreators, dispatch);
   };
 }
-
-module.exports = wrapActionCreators;
