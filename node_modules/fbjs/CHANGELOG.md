@@ -1,5 +1,60 @@
 ## [Unreleased]
 
+## [0.8.2] - 2016-05-05
+
+## Removed
+- Removed extraneous production dependency
+
+
+## [0.8.1] - 2016-04-18
+
+## Added
+- We now include a `Promise` class definition in `flow/lib` to account for the changes in Flow v0.23 which removed non-spec methods. This will allow our code to continue typechecking while using these methods.
+
+
+## [0.8.0] - 2016-04-04
+
+### Added
+- Several additional modules. Notably, a collection of Unicode utilities and many new `functional` helpers.
+- `CSSCore`: added `matchesSelector` method
+
+### Changed
+- Copyright headers updated to reflect current boilerplate
+- `@providesModule` headers removed from generated source code
+- Flow files now contain relative requires, improving compatibility with Haste and CommonJS module systems
+
+### Fixed
+- `isEmpty`: Protect from breaking in environments without `Symbol` defined
+
+
+## [0.7.2] - 2016-02-05
+
+### Fixed
+- `URI`: correctly store reference to value in constructor and return it when stringifying
+
+### Removed
+- Backed out rejection tracking for React Native `Promise` implementation. That code now lives in React Native.
+
+## [0.7.1] - 2016-02-02
+
+### Fixed
+
+- Corrected require path issue for native `Promise` module
+
+## [0.7.0] - 2016-01-27
+
+### Added
+- `Promise` for React Native with rejection tracking in `__DEV__` and a `finally` method
+- `_shouldPolyfillES6Collection`: check if ES6 Collections need to be polyfilled.
+
+### Removed
+- `toArray`: removed in favor of using `Array.from` directly.
+
+### Changed
+- `ErrorUtils`: Re-uses any global instance that already exists
+- `fetch`: Switched to `isomorphic-fetch` when a global implementation is missing
+- `shallowEqual`: handles `NaN` values appropriately (as equal), now using `Object.is` semantics
+
 ## [0.6.1] - 2016-01-06
 
 ### Changed
