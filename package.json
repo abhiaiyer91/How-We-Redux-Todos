@@ -1,11 +1,28 @@
 {
+  "name": "how-we-redux-todos",
+  "version": "1.0.0",
+  "description": "A Todo App using Redux and Meteor.js",
+  "scripts": {
+    "start": "meteor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhiaiyer91/How-We-Redux-Todos.git"
+  },
+  "author": "Abhi Aiyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhiaiyer91/How-We-Redux-Todos/issues"
+  },
+  "homepage": "https://github.com/abhiaiyer91/How-We-Redux-Todos#readme",
   "dependencies": {
     "classnames": "^2.2.1",
-    "react": "^15.0.1",
-    "react-addons-pure-render-mixin": "^15.0.1",
-    "react-paginate": "^0.5.0",
-    "react-redux": "^4.4.4",
-    "redux": "^3.0.5",
+    "react": "^15.0.2",
+    "react-addons-pure-render-mixin": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-paginate": "^1.0.5",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
     "redux-logger": "^2.3.1",
     "redux-thunk": "^2.0.1"
   }
