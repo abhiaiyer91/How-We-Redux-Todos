@@ -6,7 +6,7 @@ import TodoApp from '../../imports/client/components/TodoApp';
 
 function TodoAppRoot() {
   return (
-    <div className="todo-container">
+    <div className='todo-container'>
       <Provider store={Store}>
         <TodoApp/>
       </Provider>
@@ -20,4 +20,3 @@ Meteor.startup(()=> {
     document.getElementById('app')
   );
 });
-

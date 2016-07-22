@@ -25,5 +25,10 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.3.1",
     "redux-thunk": "^2.0.1"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11"
   }
 }
